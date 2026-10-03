@@ -9,7 +9,6 @@
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100svh; background: #080808; color: #fff; font-family: Arial, sans-serif; display: grid; place-items: center; padding: 32px 20px; }
-    body::before { content: ""; position: fixed; inset: -8px; background: linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.42)), url('fachada.png') center center / cover no-repeat; filter: blur(3px); z-index: -1; pointer-events: none; }
     body { isolation: isolate; }
     main { width: min(100%, 440px); padding: 34px 26px; border: 1px solid rgba(255,255,255,.12); border-radius: 24px; background: rgba(8,8,8,.72); box-shadow: 0 24px 80px rgba(0,0,0,.45); backdrop-filter: blur(12px); }
     h1 { font-size: 15px; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; text-align: center; color: #aaa; margin: 0 0 32px; }
@@ -27,13 +26,11 @@
 </head>
 <body>
   <main>
-    <h1>Escolha sua experiência</h1>
     <nav aria-label="Nossas empresas">
       <!-- Quando os sites estiverem prontos, adicione href com o destino e remova aria-disabled e tabindex. -->
       <a class="brand beer" role="link" aria-disabled="true" tabindex="0"><span>Na Avenida Beer</span><span class="hours">Cardápio · 18h às 6h</span></a>
       <a class="brand alice" role="link" aria-disabled="true" tabindex="0"><span>Assados da Alice</span><span class="hours">Cardápio · 6h30 às 18h</span></a>
     </nav>
-    <p class="notice">Links disponíveis em breve.</p>
   </main>
 </body>
 </html>
