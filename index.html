@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Na Avenida Beer e Assados da Alice. Escolha sua experiência.">
+  <title>Na Avenida Beer · Assados da Alice</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100svh; background: #080808; color: #fff; font-family: Arial, sans-serif; display: grid; place-items: center; padding: 32px 20px; }
+    main { width: min(100%, 440px); }
+    h1 { font-size: 15px; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; text-align: center; color: #aaa; margin: 0 0 32px; }
+    nav { display: grid; gap: 18px; }
+    .brand { width: 100%; min-height: 104px; border-radius: 12px; padding: 24px; display: flex; align-items: center; justify-content: center; font-size: clamp(20px, 5vw, 26px); font-weight: 700; text-decoration: none; text-align: center; line-height: 1.3; border: 1px solid; }
+    .beer { background: #111; color: #d8b565; border-color: #b58e42; }
+    .alice { background: #fff; color: #b91c2c; border-color: #fff; }
+    .brand:focus-visible { outline: 3px solid #fff; outline-offset: 6px; }
+    .brand[aria-disabled="true"] { cursor: default; }
+    .notice { margin: 28px 0 0; color: #888; font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Escolha sua experiência</h1>
+    <nav aria-label="Nossas empresas">
+      <!-- Quando os sites estiverem prontos, adicione href com o destino e remova aria-disabled e tabindex. -->
+      <a class="brand beer" role="link" aria-disabled="true" tabindex="0">Na Avenida Beer</a>
+      <a class="brand alice" role="link" aria-disabled="true" tabindex="0">Assados da Alice</a>
+    </nav>
+    <p class="notice">Links disponíveis em breve.</p>
+  </main>
+</body>
+</html>
