@@ -9,15 +9,20 @@
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100svh; background: #080808; color: #fff; font-family: Arial, sans-serif; display: grid; place-items: center; padding: 32px 20px; }
-    main { width: min(100%, 440px); }
+    body::before { content: ""; position: fixed; inset: -14px; background: linear-gradient(180deg, rgba(0,0,0,.58), rgba(0,0,0,.82)), url('fachada.png') center center / cover no-repeat; filter: blur(6px); z-index: -1; pointer-events: none; }
+    body { isolation: isolate; }
+    main { width: min(100%, 440px); padding: 34px 26px; border: 1px solid rgba(255,255,255,.12); border-radius: 24px; background: rgba(8,8,8,.72); box-shadow: 0 24px 80px rgba(0,0,0,.45); backdrop-filter: blur(12px); }
     h1 { font-size: 15px; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; text-align: center; color: #aaa; margin: 0 0 32px; }
     nav { display: grid; gap: 18px; }
     .brand { width: 100%; min-height: 104px; border-radius: 12px; padding: 24px; display: flex; align-items: center; justify-content: center; font-size: clamp(20px, 5vw, 26px); font-weight: 700; text-decoration: none; text-align: center; line-height: 1.3; border: 1px solid; }
-    .beer { background: #111; color: #d8b565; border-color: #b58e42; }
+    .beer { background: linear-gradient(135deg, #191713, #090909); color: #e4c37c; border-color: #b58e42; box-shadow: inset 0 1px 0 rgba(228,195,124,.12); }
     .alice { background: #fff; color: #b91c2c; border-color: #fff; }
     .brand:focus-visible { outline: 3px solid #fff; outline-offset: 6px; }
+    .brand { flex-direction: column; gap: 8px; }
+    .hours { font-size: 14px; font-weight: 400; letter-spacing: .02em; }
     .brand[aria-disabled="true"] { cursor: default; }
     .notice { margin: 28px 0 0; color: #888; font-size: 14px; text-align: center; }
+    @media (max-width: 480px) { main { padding: 30px 20px; } .brand { min-height: 96px; padding: 20px 12px; } }
   </style>
 </head>
 <body>
@@ -25,8 +30,8 @@
     <h1>Escolha sua experiência</h1>
     <nav aria-label="Nossas empresas">
       <!-- Quando os sites estiverem prontos, adicione href com o destino e remova aria-disabled e tabindex. -->
-      <a class="brand beer" role="link" aria-disabled="true" tabindex="0">Na Avenida Beer</a>
-      <a class="brand alice" role="link" aria-disabled="true" tabindex="0">Assados da Alice</a>
+      <a class="brand beer" role="link" aria-disabled="true" tabindex="0"><span>Na Avenida Beer</span><span class="hours">Cardápio · 18h às 6h</span></a>
+      <a class="brand alice" role="link" aria-disabled="true" tabindex="0"><span>Assados da Alice</span><span class="hours">Cardápio · 6h30 às 18h</span></a>
     </nav>
     <p class="notice">Links disponíveis em breve.</p>
   </main>
