@@ -29,6 +29,12 @@
     .beer > span:first-of-type { top: 50%; transform: translateY(-100%); font-size: clamp(18px, 4.5vw, 24px); }
     .beer > .hours { top: 50%; margin-top: 8px; font-size: 13px; }
     .beer img { display: block; width: 100%; aspect-ratio: 3.53 / 1; height: auto; object-fit: cover; object-position: center; margin-bottom: 0; }
+    .brand.alice { position: relative; padding: 0; overflow: hidden; display: grid; grid-template-columns: 1fr; isolation: isolate; color: #fff; border-color: #d7a530; }
+    .alice img { display: block; width: 100%; aspect-ratio: 3.53 / 1; height: auto; object-fit: cover; object-position: center; }
+    .alice::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 20%, rgba(70,0,0,.65) 40%, rgba(70,0,0,.65) 60%, transparent 80%); z-index: 1; pointer-events: none; }
+    .alice > span { position: absolute; left: 0; right: 0; z-index: 2; padding: 0 10px; text-shadow: 0 2px 6px #500; }
+    .alice > span:first-of-type { top: 50%; transform: translateY(-100%); font-size: clamp(18px, 4.5vw, 24px); }
+    .alice > .hours { top: 50%; margin-top: 8px; font-size: 13px; }
   </style>
 </head>
 <body>
@@ -36,7 +42,7 @@
     <nav aria-label="Nossas empresas">
       <!-- Quando os sites estiverem prontos, adicione href com o destino e remova aria-disabled e tabindex. -->
       <a class="brand beer" href="https://naavenidabeer-tfy9.vercel.app/"><img src="na-avenida-banner.png" alt="" width="1984" height="800"><span>Na Avenida Beer</span><span class="hours">Cardápio · 18h às 6h</span></a>
-      <a class="brand alice" href="https://foodzap.app.br/menu/assadosdaalicenaavenidabeer"><span>Assados da Alice</span><span class="hours">Cardápio · 6h30 às 18h</span></a>
+      <a class="brand alice" href="https://foodzap.app.br/menu/assadosdaalicenaavenidabeer"><img src="assados-alice-banner.png" alt="" width="1984" height="800"><span>Assados da Alice</span><span class="hours">Cardápio · 6h30 às 18h</span></a>
     </nav>
   </main>
 </body>
