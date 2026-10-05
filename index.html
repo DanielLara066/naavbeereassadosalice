@@ -23,13 +23,15 @@
     .brand[aria-disabled="true"] { cursor: default; }
     .notice { margin: 28px 0 0; color: #888; font-size: 14px; text-align: center; }
     @media (max-width: 480px) { .brand { min-height: 104px; padding: 22px 16px; } }
+    .brand.beer { padding: 0 0 20px; overflow: hidden; gap: 6px; }
+    .beer img { display: block; width: 100%; height: auto; margin-bottom: 8px; }
   </style>
 </head>
 <body>
   <main>
     <nav aria-label="Nossas empresas">
       <!-- Quando os sites estiverem prontos, adicione href com o destino e remova aria-disabled e tabindex. -->
-      <a class="brand beer" href="https://naavenidabeer-tfy9.vercel.app/"><span>Na Avenida Beer</span><span class="hours">Cardápio · 18h às 6h</span></a>
+      <a class="brand beer" href="https://naavenidabeer-tfy9.vercel.app/"><img src="na-avenida-banner.png" alt="" width="1984" height="800"><span>Na Avenida Beer</span><span class="hours">Cardápio · 18h às 6h</span></a>
       <a class="brand alice" href="https://foodzap.app.br/menu/assadosdaalicenaavenidabeer"><span>Assados da Alice</span><span class="hours">Cardápio · 6h30 às 18h</span></a>
     </nav>
   </main>
